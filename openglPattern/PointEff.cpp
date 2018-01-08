@@ -76,6 +76,6 @@ void PointEff::Draw() const
 CGameObject * PointEff::clone()
 {
 	auto ptr = new PointEff();
-	ptr->SetColor(m_ubColorS, m_ubColorE);
+	ptr->SetColor(m_ubColorE,m_ubColorS);
 	return ptr;
 }
