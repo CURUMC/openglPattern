@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{980485ea-a32d-4c89-8fe9-8bfad99d5d51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CirEff">
+      <UniqueIdentifier>{4d27d44e-26d4-476e-92f5-60618b1fdb97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CirEff\state">
+      <UniqueIdentifier>{8030d6df-3f2a-42a7-8e40-194eb9bea953}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Point">
+      <UniqueIdentifier>{1a5431a4-b0a4-4e1d-a031-7e88fa88016f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SPoint">
+      <UniqueIdentifier>{c4a1eea8-5a90-4ab5-a463-5b81c3c27075}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Spawner">
+      <UniqueIdentifier>{06f231ec-e7b5-43c0-925b-00b3f5568b65}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="소스1-9.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="CirEff.cpp">
+      <Filter>CirEff</Filter>
+    </ClCompile>
+    <ClCompile Include="CirEffState.cpp">
+      <Filter>CirEff\state</Filter>
+    </ClCompile>
+    <ClCompile Include="operator.cpp">
+      <Filter>Point</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>Point</Filter>
+    </ClCompile>
+    <ClCompile Include="Point3.cpp">
+      <Filter>Point</Filter>
+    </ClCompile>
+    <ClCompile Include="SPoint.cpp">
+      <Filter>SPoint</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="헤더.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="CirEff.h">
+      <Filter>CirEff</Filter>
+    </ClInclude>
+    <ClInclude Include="operator.h">
+      <Filter>Point</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>Point</Filter>
+    </ClInclude>
+    <ClInclude Include="Point3.h">
+      <Filter>Point</Filter>
+    </ClInclude>
+    <ClInclude Include="CirEffState.h">
+      <Filter>CirEff\state</Filter>
+    </ClInclude>
+    <ClInclude Include="SPoint.h">
+      <Filter>SPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="Spawner.h">
+      <Filter>Spawner</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
