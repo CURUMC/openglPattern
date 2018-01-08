@@ -1,5 +1,5 @@
 #include "SPoint.h"
-#include <GL\glut.h>
+#include "GL\glut.h"
 #include <random>
 
 
