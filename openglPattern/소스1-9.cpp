@@ -60,7 +60,7 @@ void pluslist() {
 	list.emplace_back(tmp);
 	if (list.size() > 10) {
 		//list.pop_front();
-		list.front()->Off();
+		list.front()->OffEff();
 		list2.push_back(list.front());
 		list.pop_front();
 	}
@@ -75,7 +75,7 @@ void Timerfunction(int value) {
 	}
 
 	for (auto&q : list2) {
-		if (q->GetisDie())
+		if (q->isDie())
 		{
 			q->Release();
 			delete q;

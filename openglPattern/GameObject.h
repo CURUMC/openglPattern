@@ -12,6 +12,5 @@ public:
 	}
 	virtual void Draw() const = 0;
 	virtual void Update() = 0;
-	virtual CGameObject * clone() = 0;
 };
 

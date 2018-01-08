@@ -19,29 +19,11 @@
     <Filter Include="CirEff">
       <UniqueIdentifier>{4d27d44e-26d4-476e-92f5-60618b1fdb97}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CirEff\state">
-      <UniqueIdentifier>{8030d6df-3f2a-42a7-8e40-194eb9bea953}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Point">
       <UniqueIdentifier>{1a5431a4-b0a4-4e1d-a031-7e88fa88016f}</UniqueIdentifier>
     </Filter>
     <Filter Include="SPoint">
       <UniqueIdentifier>{c4a1eea8-5a90-4ab5-a463-5b81c3c27075}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Spawner">
-      <UniqueIdentifier>{06f231ec-e7b5-43c0-925b-00b3f5568b65}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CirEff\state\On">
-      <UniqueIdentifier>{ea815846-661f-4f0c-8032-27a347af533c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CirEff\state\Off">
-      <UniqueIdentifier>{f6d222ab-db49-4d15-adb1-092fc9ca51bc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CirEff\state\Live">
-      <UniqueIdentifier>{f1142489-6324-4f0d-b524-865d653bf91d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CirEff\state\Die">
-      <UniqueIdentifier>{e17e29f3-85e0-4364-b140-1c2599377ff4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -60,26 +42,11 @@
     <ClCompile Include="Point.cpp">
       <Filter>Point</Filter>
     </ClCompile>
-    <ClCompile Include="Point3.cpp">
-      <Filter>Point</Filter>
-    </ClCompile>
     <ClCompile Include="PointEff.cpp">
       <Filter>SPoint</Filter>
     </ClCompile>
-    <ClCompile Include="OnCirState.cpp">
-      <Filter>CirEff\state\On</Filter>
-    </ClCompile>
-    <ClCompile Include="OffCirState.cpp">
-      <Filter>CirEff\state\Off</Filter>
-    </ClCompile>
-    <ClCompile Include="LiveCirState.cpp">
-      <Filter>CirEff\state\Live</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="헤더.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
     <ClInclude Include="GameObject.h">
       <Filter>base</Filter>
     </ClInclude>
@@ -92,29 +59,11 @@
     <ClInclude Include="Point.h">
       <Filter>Point</Filter>
     </ClInclude>
-    <ClInclude Include="Point3.h">
-      <Filter>Point</Filter>
-    </ClInclude>
-    <ClInclude Include="CirEffState.h">
-      <Filter>CirEff\state</Filter>
-    </ClInclude>
-    <ClInclude Include="Spawner.h">
-      <Filter>Spawner</Filter>
-    </ClInclude>
     <ClInclude Include="PointEff.h">
       <Filter>SPoint</Filter>
     </ClInclude>
-    <ClInclude Include="OnCirState.h">
-      <Filter>CirEff\state\On</Filter>
-    </ClInclude>
-    <ClInclude Include="OffCirState.h">
-      <Filter>CirEff\state\Off</Filter>
-    </ClInclude>
-    <ClInclude Include="LiveCirState.h">
-      <Filter>CirEff\state\Live</Filter>
-    </ClInclude>
-    <ClInclude Include="DieCirState.h">
-      <Filter>CirEff\state\Die</Filter>
-    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
 </Project>

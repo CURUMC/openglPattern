@@ -72,10 +72,3 @@ void PointEff::Draw() const
 	glEnd();
 
 }
-
-CGameObject * PointEff::clone()
-{
-	auto ptr = new PointEff();
-	ptr->SetColor(m_ubColorE,m_ubColorS);
-	return ptr;
-}

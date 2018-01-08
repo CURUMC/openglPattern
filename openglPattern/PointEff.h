@@ -27,6 +27,5 @@ public:
 
 	virtual void Draw() const;
 
-	virtual CGameObject * clone() override;
 };
 

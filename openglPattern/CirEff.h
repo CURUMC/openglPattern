@@ -1,51 +1,43 @@
 #pragma once
-#include "GameObject.h"
-#include "Çì´õ.h"
 #include <list>
+#include "GL\glut.h"
+#include "GameObject.h"
 #define PI (3.14f)
 #define rSIZE_DET (1)
-class CirEffState;
 
 class CirEff :
 	public CGameObject
 {
-	CirEffState* m_state;
+
+	float F_DET;
+	float m_fdet;
+	time_t m_time{ 0 };
+	time_t m_maxtime;
+
+	GLubyte m_ubColorS[3];
+	GLubyte m_ubColorE[3];
 
 	std::list<CGameObject*> m_cirs;
 
+	bool m_off{ false };
+	bool m_live{ true };
+
 public:
-	virtual CGameObject * clone() override { return nullptr;};
-	bool m_live{true};
 
 	CirEff();
 	virtual ~CirEff();
 
-	void Release();
 	void Init(const Point& pos);
-	void Update();
+	void Release();
+	virtual void Update() override;
+	virtual void Draw() const override;
 
-	void Off();
+	void OffEff();
+	bool isDie() const;
 
-	bool GetisDie() const;
+private:
+	void pushback_PointEff(const Point& pos);
 
-	void ChangeState(ENUM_CIR_STATE dtateid);
-
-	virtual void Draw() const;
-
-	void addPointeff(CGameObject * pobj) {
-		m_cirs.push_back(pobj);
-
-	}
-	bool popbackPointeff() {
-		if (m_cirs.size())
-		{
-			delete m_cirs.back();
-			m_cirs.pop_back();
-			return true;
-
-		}
-		else
-			return false;
-	}
+	bool popback_PointEff();
 };
 
