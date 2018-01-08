@@ -1,18 +1,17 @@
-#include "SPoint.h"
+#include "PointEff.h"
 #include "GL\glut.h"
-#include <random>
 
 
-CSPoint::CSPoint()
+PointEff::PointEff()
 {
 	m_fColordel = 0;
 }
 
-CSPoint::~CSPoint()
+PointEff::~PointEff()
 {
 }
 
-void CSPoint::SetColor(GLubyte * ubCS, GLubyte * ubCE)
+void PointEff::SetColor(GLubyte * ubCS, GLubyte * ubCE)
 {
 	if (ubCS)
 		for (auto & q : m_ubColorS) {
@@ -25,21 +24,21 @@ void CSPoint::SetColor(GLubyte * ubCS, GLubyte * ubCE)
 		}
 }
 
-void CSPoint::SetColorS(const GLubyte & r, const GLubyte & g, const GLubyte & b)
+void PointEff::SetColorS(const GLubyte & r, const GLubyte & g, const GLubyte & b)
 {
 	m_ubColorS[0] = r;
 	m_ubColorS[1] = g;
 	m_ubColorS[2] = b;
 }
 
-void CSPoint::SetColorE(const GLubyte & r, const GLubyte & g, const GLubyte & b)
+void PointEff::SetColorE(const GLubyte & r, const GLubyte & g, const GLubyte & b)
 {
 	m_ubColorE[0] = r;
 	m_ubColorE[1] = g;
 	m_ubColorE[2] = b;
 }
 
-void CSPoint::Update()
+void PointEff::Update()
 {
 	m_fColordel += 0.01f;
 	if (m_fColordel >= 1) {
@@ -52,7 +51,7 @@ void CSPoint::Update()
 	}
 }
 
-void CSPoint::Draw() const
+void PointEff::Draw() const
 {
 	glBegin(GL_POLYGON);
 
@@ -74,9 +73,9 @@ void CSPoint::Draw() const
 
 }
 
-CGameObject * CSPoint::clone()
+CGameObject * PointEff::clone()
 {
-	auto ptr = new CSPoint();
+	auto ptr = new PointEff();
 	ptr->SetColor(m_ubColorS, m_ubColorE);
 	return ptr;
 }

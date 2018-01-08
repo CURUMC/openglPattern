@@ -17,6 +17,7 @@ GLvoid Reshape(int w, int h);
 void Mouse(int x, int y);
 void Mouse(int button, int state, int x, int y);
 void Keyboard(unsigned char key, int x, int y);
+void Release(int &retflag);
 void Timerfunction(int value);
 void Init();
 
@@ -28,7 +29,7 @@ void main(int argc, char *argv[])
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA); // 디스플레이 모드 설정
 	glutInitWindowPosition(100, 100); // 윈도우의 위치지정
 	glutInitWindowSize(800, 600); // 윈도우의 크기 지정
-	glutCreateWindow("Example"); // 윈도우 생성 (윈도우 이름)
+	glutCreateWindow("PATTERN STUDY PROJECT"); // 윈도우 생성 (윈도우 이름)
 	glutDisplayFunc(drawScene); // 출력 함수의 지정
 	glutReshapeFunc(Reshape); // 다시 그리기 함수의 지정
 	Init();
@@ -76,6 +77,7 @@ void Timerfunction(int value) {
 	for (auto&q : list2) {
 		if (q->GetisDie())
 		{
+			q->Release();
 			delete q;
 			q = nullptr;
 		}
@@ -100,7 +102,7 @@ void Mouse(int button, int state, int x, int y) {
 
 void Init() {
 
-
+	//list
 	list.clear();
 
 
@@ -132,5 +134,34 @@ GLvoid Reshape(int w, int h)
 
 void Keyboard(unsigned char key, int x, int y)
 {
+	switch (key)
+	{
+	case 'q':
+	case 'Q': {
+		int retflag;
+		Release(retflag);
+		if (retflag == 2) break;
+	}
+	default:
+		break;
+	}
+}
 
+void Release(int &retflag)
+{
+	retflag = 1;
+
+
+	for (auto q : list) {
+		q->Release();
+		delete q;
+	}
+	for (auto q : list2) {
+		q->Release();
+		delete q;
+	}
+	list.clear();
+	list2.clear();
+	exit(0);
+	{ retflag = 2; return; };
 }

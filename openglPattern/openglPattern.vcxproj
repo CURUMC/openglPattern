@@ -143,22 +143,28 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CirEff.cpp" />
-    <ClCompile Include="CirEffState.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="LiveCirState.cpp" />
+    <ClCompile Include="OffCirState.cpp" />
+    <ClCompile Include="OnCirState.cpp" />
     <ClCompile Include="operator.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Point3.cpp" />
-    <ClCompile Include="SPoint.cpp" />
+    <ClCompile Include="PointEff.cpp" />
     <ClCompile Include="소스1-9.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CirEff.h" />
     <ClInclude Include="CirEffState.h" />
+    <ClInclude Include="DieCirState.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="LiveCirState.h" />
+    <ClInclude Include="OffCirState.h" />
+    <ClInclude Include="OnCirState.h" />
     <ClInclude Include="operator.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Point3.h" />
-    <ClInclude Include="SPoint.h" />
+    <ClInclude Include="PointEff.h" />
     <ClInclude Include="헤더.h" />
     <ClInclude Include="Spawner.h" />
   </ItemGroup>

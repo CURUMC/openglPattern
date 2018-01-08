@@ -1,6 +1,6 @@
 #include "CirEff.h"
 #include"CirEffState.h"
-
+#include "OnCirState.h"
 
 CirEff::CirEff()
 {
@@ -9,7 +9,15 @@ CirEff::CirEff()
 
 CirEff::~CirEff()
 {
-	delete cspointSpawner;
+}
+
+void CirEff::Release()
+{
+	while (popbackPointeff());
+	if (m_state)
+	{
+		m_state->exit(*this);  delete m_state;
+	}
 }
 
 void CirEff::Init(const Point & pos)
@@ -17,8 +25,6 @@ void CirEff::Init(const Point & pos)
 	SetPos(pos);
 	m_cirs.clear();
 	m_state = new OnCirState; m_state->enter(*this);
-	cspoint_prototype.SetColorS(rand() % 50 + 70, rand() % 170 + 70, rand() % 170 + 70);
-	cspoint_prototype.SetColorE(rand() % 90 + 10, rand() % 80 + 10, rand() % 80 + 10);
 
 }
 
@@ -50,7 +56,10 @@ void CirEff::ChangeState(ENUM_CIR_STATE dtateid)
 	auto state = m_state->changeState(*this, dtateid);
 
 	if (state) {
-		delete m_state;
+		if (m_state)
+		{
+			m_state->exit(*this);  delete m_state;
+		}
 		m_state = state;
 		m_state->enter(*this);
 	}

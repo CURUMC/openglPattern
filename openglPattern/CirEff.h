@@ -1,8 +1,6 @@
 #pragma once
 #include "GameObject.h"
-#include "SPoint.h"
 #include "Çì´õ.h"
-#include "Spawner.h"
 #include <list>
 #define PI (3.14f)
 #define rSIZE_DET (1)
@@ -14,9 +12,6 @@ class CirEff :
 	CirEffState* m_state;
 
 	std::list<CGameObject*> m_cirs;
-	CSPoint cspoint_prototype;
-
-	Spawner* cspointSpawner = new Spawner(&cspoint_prototype);
 
 public:
 	virtual CGameObject * clone() override { return nullptr;};
@@ -25,6 +20,7 @@ public:
 	CirEff();
 	virtual ~CirEff();
 
+	void Release();
 	void Init(const Point& pos);
 	void Update();
 
@@ -36,11 +32,8 @@ public:
 
 	virtual void Draw() const;
 
-	void addPointeff(Point pos) {
-		m_cirs.push_back(cspointSpawner->spawnObject());
-	//	m_cirs.emplace_back();
-		m_cirs.back()->SetPos(pos);
-	//	m_cirs.back().SetColor(ubCS, ubCE);
+	void addPointeff(CGameObject * pobj) {
+		m_cirs.push_back(pobj);
 
 	}
 	bool popbackPointeff() {
@@ -48,7 +41,6 @@ public:
 		{
 			delete m_cirs.back();
 			m_cirs.pop_back();
-
 			return true;
 
 		}

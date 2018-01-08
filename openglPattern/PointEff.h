@@ -1,7 +1,7 @@
 #pragma once
 #include "GameObject.h"
 #include "GL\glut.h"
-class CSPoint :
+class PointEff :
 	public CGameObject
 {
 protected:
@@ -11,8 +11,8 @@ protected:
 
 
 public:
-	CSPoint();
-	virtual ~CSPoint();
+	PointEff();
+	virtual ~PointEff();
 
 	void Init(const Point& pos) {
 		SetPos(pos);
